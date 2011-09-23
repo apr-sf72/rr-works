@@ -14,19 +14,44 @@ local function leapYear(theYear)
 		return true
 	else 
 		return false
-	end
-
+	end 
 end
+
+
+local function uhhyear(theYear)
+	if ( theYear % 4) ==0 then 
+	 	if (theYear % 100)==0 then
+	 		if (theYear % 400)==0 then
+	 			return true -- 400, 800, ..
+	 		else
+	 			return false --- 500, 600,
+	 		end
+	 	else
+	 		return true -- 8, 16, 96
+	 	end
+	 else 
+	 	return false -- 3,7,99, ..
+	 end
+
+	 
+	 if (theYear % 400)==0 then
+	 	return true
+	 else 
+	 	return false
+	 end
+
+ end
 
 run = function()
    -- call your function on year xxxx
-	local year1 = 1984
-	local result1 = leapYear(year1)
-	if (result == true) then
-		WorkPad1:setText("year " .. year1 .. " is leap ")
+	local year1 = 2010
+	local uhhYear1 = uhhyear(year1)
+	if (uhhYear1 == true) then
+		WorkPad2:setText("year " .. year1 .. " is leap ")
 	else
-		WorkPad1:setText("year " .. year1 .. " is not leap ")
+		WorkPad2:setText("year " .. year1 .. " is not leap ")
 	end
+	
 
    -- call your function on year yyyy
    -- and put on WorkPad2
