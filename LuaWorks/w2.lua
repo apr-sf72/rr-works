@@ -14,8 +14,10 @@ local function example(x)
 end
 
 -- write your own function here
---
-
+local function first(x)
+local varY = (3 * x + 5 / 2)
+return varY 
+end
 
 
 run = function()
@@ -28,6 +30,15 @@ run = function()
    -- these two dots .. is telling iphone to concatenate the text 
    -- so, print("first" .. ", " .. " second") would put "first, second" on screen
    WorkPad1:setText(eg1 .. ", " .. eg2 .. ", " .. eg3)
+
+   -- calculate first and put result 
+   local first1 = first(7)
+   local first2 = first(18)
+   local first3 = first(25)
+
+   -- these two dots .. is telling iphone to concatenate the text
+   -- so, print("first" .. "," .. " second") would put "first, second" on screen
+   WorkPad2:setText(first1 .. "." .. first2 .."," .. first3)
 
    -- call your function to do calculation
 
