@@ -16,15 +16,11 @@ local function towerStart()
 end
 
 local function towerStep1()
-	towers["t1"] = {3, 2}
-	towers["t2"] = {}
-	towers["t3"] = {1}
+	-- homework
 end
 
 local function towerStep6()
-	towers["t1"] = {1}
-	towers["t2"] = {}
-	towers["t3"] = {3, 2}
+	-- homework
 end
 
 run = function()
